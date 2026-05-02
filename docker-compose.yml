@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  #  PHP/Apache website
+  web:
+    build: .
+    ports:
+      - "8080:80" # Access site at http://localhost:8080
+    volumes:
+      - .:/var/www/html # Syncs local files to the container live
+    depends_on:
+      - db # Don't start the web until the database is ready
+    restart: on-failure
+
+  # This is THE MySQL database
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: vuln_DB
+    # This keeps the database data safe even if the container stops
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    
+
+volumes:
+  db_data:

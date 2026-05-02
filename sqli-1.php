@@ -1,21 +1,17 @@
-<?php 
-    include 'config/conn.php';
-?>  
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vulnsite</title>
+    <title>SQL Level 1</title>
 </head>
 <body>
-
-   <div id="menu">
-     <br><a href="sqli-1.php">hey</a>
-   </div>
     
+    <div id="login-form">
+      <form action="GET">
+        <label for="login"></label>
+      </form>  
+    </div>
 
-    
 </body>
 </html>
