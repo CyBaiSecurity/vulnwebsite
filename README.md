@@ -1,6 +1,6 @@
 # Vulnsite
 
-Private PHP site for practicing web tests on an app I own, then patching what I find. It is not published.
+PHP site for practicing web tests on an app I own, then patching what I find. Run it on your own machine. This repository is public. The site is not hosted.
 
 ## Run
 
